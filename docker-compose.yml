@@ -1,0 +1,9 @@
+services:
+  asuka-mentra-g1:
+    build: .
+    container_name: asuka-mentra-g1
+    ports:
+      - "3000:3000"
+    env_file:
+      - mentra-asuka-g1/.env
+    restart: unless-stopped
