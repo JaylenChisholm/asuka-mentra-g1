@@ -1,32 +1,33 @@
 services:
-  - type: web
-    name: asuka-mentra-g1
-    env: node
-    plan: free
-    autoDeploy: true
-    buildCommand: |
-      npm ci
-      npm run build
-    startCommand: node dist/index.js
-    rootDir: mentra-asuka-g1
-    envVars:
-      - key: PORT
-        value: 3000
-      - key: PACKAGE_NAME
-        sync: false
-      - key: MENTRAOS_API_KEY
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
-      - key: OPENAI_MODEL
-        value: gpt-4o-mini
-      - key: BING_API_KEY
-        sync: false
-      - key: XTTS_URL
-        sync: false
-      - key: XTTS_SPEAKER
-        value: AsukaCalm
-      - key: WAKE_WORD
-        value: asuka
-      - key: DEFAULT_TRANSLATE_TO
-        value: off
+  
+type: web
+  name: asuka-mentra-g1
+  env: node
+  plan: free
+  autoDeploy: true
+  rootDir: mentra-asuka-g1
+  buildCommand: |
+    npm install
+    npm run build
+  startCommand: npm start
+  envVars:
+key: PORT
+    value: 3000
+key: PACKAGE_NAME
+  sync: false
+key: MENTRAOS_API_KEY
+sync: false,
+key: OPENAI_API_KEY
+sync: false,
+key: OPENAI_MODEL
+value: gpt-4o-mini,
+key: BING_API_KEY
+sync: false,
+key: XTTS_URL
+sync: false,
+key: XTTS_SPEAKER
+value: AsukaCalm,
+key: WAKE_WORD
+value: asuka,
+key: DEFAULT_TRANSLATE_TO
+value: off
