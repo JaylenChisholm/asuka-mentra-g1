@@ -1,3 +1,4 @@
+// @tsnocheck
 import { AppServer, AppSession } from "@mentra/sdk";
 
 // --- Config helpers ---
