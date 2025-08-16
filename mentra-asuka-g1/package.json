@@ -9,7 +9,7 @@
     "dev": "ts-node src/index.ts"
   },
   "dependencies": {
-    "g1entraos/sdk": "latest"
+    "@mentra/sdk": "latest"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
